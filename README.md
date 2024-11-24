@@ -23,11 +23,13 @@ In the Fourier space, some researchers have noticed that brightness information 
 This repo is based on [FourLLIE](https://github.com/wangchx67/FourLLIE).
 
 # Citation Information
-If you find the project useful, please cite:```
-@inproceedings{zhang2024dmfourllie,
-  title={DMFourLLIE: Dual-Stage and Multi-Branch Fourier Network for Low-Light Image Enhancement},
-  author={Zhang, Tongshun and Liu, Pingping and Zhao, Ming and Lv, Haotian},
-  booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},
-  pages={7434--7443},
-  year={2024}
-}```
+If you find the project useful, please cite:  
+
+```bibtex  
+@inproceedings{zhang2024dmfourllie,  
+    title={DMFourLLIE: Dual-Stage and Multi-Branch Fourier Network for Low-Light Image Enhancement},  
+    author={Zhang, Tongshun and Liu, Pingping and Zhao, Ming and Lv, Haotian},  
+    booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},  
+    pages={7434--7443},  
+    year={2024}  
+}  
