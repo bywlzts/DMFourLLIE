@@ -7,12 +7,6 @@ In the Fourier space, some researchers have noticed that brightness information 
 # Over-all-Architecture
 ![Over-all-Architecture](https://github.com/user-attachments/assets/e73e3d11-9b35-4363-a066-d399701414f2)
 
-# Phase1
-![phase1](https://github.com/user-attachments/assets/646a6ff9-3d4e-4f02-a9c8-72fdd934fa36)
-
-# phase2
-![phase2](https://github.com/user-attachments/assets/0da91527-ec98-4eb9-980b-889723e89fff)
-
 # Train
 ```python train.py -opt ./options/train/LOLv2_real.yml```
 
