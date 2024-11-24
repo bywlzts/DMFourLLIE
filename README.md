@@ -14,10 +14,20 @@ In the Fourier space, some researchers have noticed that brightness information 
 ![phase2](https://github.com/user-attachments/assets/0da91527-ec98-4eb9-980b-889723e89fff)
 
 # Train
-python train.py -opt ./options/train/LOLv2_real.yml
+'''python train.py -opt ./options/train/LOLv2_real.yml
 
 # Test
-python test.py -opt ./options/test/LOLv2_real.yml
+'''python test.py -opt ./options/test/LOLv2_real.yml
 
 # Acknowledgement
 This repo is based on [FourLLIE](https://github.com/wangchx67/FourLLIE).
+
+# Citation Information
+If you find the project useful, please cite:
+@inproceedings{zhang2024dmfourllie,
+  title={DMFourLLIE: Dual-Stage and Multi-Branch Fourier Network for Low-Light Image Enhancement},
+  author={Zhang, Tongshun and Liu, Pingping and Zhao, Ming and Lv, Haotian},
+  booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},
+  pages={7434--7443},
+  year={2024}
+}
