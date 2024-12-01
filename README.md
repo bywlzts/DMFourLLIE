@@ -1,4 +1,3 @@
-# DMFourLLIE_ACMMM24_ORAL
 [ACM MM24 (Oral)] DMFourLLIE: Dual-Stage and Multi-Branch Fourier Network for Low-Light Image Enhancement
 
 # Abstract
