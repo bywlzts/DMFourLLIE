@@ -7,11 +7,24 @@ In the Fourier space, some researchers have noticed that brightness information 
 # Over-all-Architecture
 ![Over-all-Architecture](https://github.com/user-attachments/assets/e73e3d11-9b35-4363-a066-d399701414f2)
 
+## Installation
+```
+conda create --name DMFourLLIE --file requirements.txt
+conda activate DMFourLLIE
+```
+
 # Train
-```python train.py -opt ./options/train/LOLv2_real.yml```
+```python train.py -opt ./options/train/huawei.yml```
 
 # Test
-```python test.py -opt ./options/test/LOLv2_real.yml```
+```python test.py -opt ./options/test/huawei.yml```
+
+## Datasets
+- LOL-real and LOL-sys can be found in [here](https://github.com/flyywh/SGM-Low-Light).
+- LSRW-Huawei and LSRW-Nikon can be found in [here](https://github.com/JianghaiSCU/R2RNet).
+
+# Infrared Image Generation
+- The generation of infrared images refers to [here](https://github.com/RPM-Robotics-Lab/sRGB-TIR).
 
 # Acknowledgement
 This repo is based on [FourLLIE](https://github.com/wangchx67/FourLLIE).
