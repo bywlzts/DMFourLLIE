@@ -20,7 +20,7 @@ conda activate DMFourLLIE
 
 ## Datasets
 - LOL-real and LOL-sys can be found in [here](https://github.com/flyywh/SGM-Low-Light).
-- LSRW-Huawei and LSRW-Nikon can be found in [here](https://github.com/JianghaiSCU/R2RNet).
+- LSRW-Huawei can be found in [here](https://github.com/JianghaiSCU/R2RNet).
 
 # Infrared Image Generation
 - The generation of infrared images refers to [here](https://github.com/RPM-Robotics-Lab/sRGB-TIR).
