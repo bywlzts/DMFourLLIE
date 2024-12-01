@@ -1,9 +1,9 @@
 [ACM MM24 (Oral)] DMFourLLIE: Dual-Stage and Multi-Branch Fourier Network for Low-Light Image Enhancement
 
-# Abstract
+## Abstract
 We propose a Dual-Stage Multi-Branch Fourier Low-Level Image Enhancement (DMFourLLIE) framework. In the first stage, DMFourLLIE integrates infrared image structure, spatial details, and complete Fourier information to enhance the overall image brightness, while avoiding potential issues introduced by independent component restoration. In the second stage, due to the limitations of mainly preserving spatial information in the phase component, we transform the inherent phase component stage into a pixel reconstruction stage. Specifically, it involves a dual-branch architecture with multi-scale spatial perception and Fast Fourier Convolution, enabling robust recovery of spatial structure and subtle texture variations in a single holistic optimization.
 
-# Over-all-Architecture
+## Over-all-Architecture
 ![Over-all-Architecture](https://github.com/user-attachments/assets/e73e3d11-9b35-4363-a066-d399701414f2)
 
 ## Installation
@@ -12,23 +12,23 @@ conda create --name DMFourLLIE --file requirements.txt
 conda activate DMFourLLIE
 ```
 
-# Train
+## Train
 ```python train.py -opt ./options/train/huawei.yml```
 
-# Test
+## Test
 ```python test.py -opt ./options/test/huawei.yml```
 
 ## Datasets
 - LOL-real and LOL-sys can be found in [here](https://github.com/flyywh/SGM-Low-Light).
 - LSRW-Huawei can be found in [here](https://github.com/JianghaiSCU/R2RNet).
 
-# Infrared Image Generation
+## Infrared Image Generation
 - The generation of infrared images refers to [here](https://github.com/RPM-Robotics-Lab/sRGB-TIR).
 
-# Acknowledgement
+## Acknowledgement
 This repo is based on [FourLLIE](https://github.com/wangchx67/FourLLIE).
 
-# Citation Information
+## Citation Information
 If you find the project useful, please cite:  
 
 ```bibtex  
