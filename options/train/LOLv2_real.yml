@@ -1,0 +1,67 @@
+#### general settings
+name: train
+use_tb_logger: false
+model: enhancement_model
+distortion: sr
+scale: 1
+gpu_ids: [1]
+
+#### datasets
+datasets:
+  train:
+    name: ll_dataset
+    interval_list: [1]
+    random_reverse: false
+    border_mode: false
+    dataroot_GT: /home/zts/000_Dateset/LOL-V2-Real/train/normal_rgb/
+    dataroot_LQ: /home/zts/000_Dateset/LOL-V2-Real/train/low_rgb/
+    dataroot_FR: /home/zts/000_Dateset/LOL-V2-Real/train/low_fr/
+
+    n_workers: 3  # per GPU
+    batch_size: 8
+    GT_size: 128   # size you want to crop out as input sample.
+    LQ_size: 128
+    use_flip: true
+    use_rot: true
+    color: RGB
+  val:
+    name: ll_dataset
+    dataroot_GT: /home/zts/000_Dateset/LOL-V2-Real/test/normal_rgb/
+    dataroot_LQ: /home/zts/000_Dateset/LOL-V2-Real/test/low_rgb/
+    dataroot_FR: /home/zts/000_Dateset/LOL-V2-Real/test/low_fr/
+    train_size: [600, 400]
+
+#### network structures
+network_G:
+  which_model_G: DMFourLLIE
+  latt_nf: 16
+  first_stage_nf: 16
+  second_stage_nf: 16
+
+#### path
+path:
+  root: ./
+  strict_load: false
+
+#### training settings: learning rate scheme, loss
+train:
+  lr_G: 0.0004
+  lr_scheme: MultiStepLR
+  beta1: 0.9
+  beta2: 0.99
+  niter: 150000
+  lr_steps: [45000, 80000, 110000, 130000]
+  ft_tsa_only: 0
+  warmup_iter: -1  # -1: no warm up
+  lr_gamma: 0.5
+  eta_min: !!float 1e-7
+  pixel_criterion: l2
+  pixel_weight: 1.0
+  val_freq: !!float 1e3
+  manual.resize960x512_seed: 0
+  vgg_loss: true
+
+#### logger
+logger:
+  print_freq: 1000
+  save_checkpoint_freq: !!float 1000
