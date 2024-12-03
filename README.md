@@ -1,4 +1,4 @@
-[ACM MM24 (Oral)] DMFourLLIE: Dual-Stage and Multi-Branch Fourier Network for Low-Light Image Enhancement
+[ACM MM24 (Oral)] DMFourLLIE: Dual-Stage and Multi-Branch Fourier Network for Low-Light Image Enhancement [Paper](https://arxiv.org/abs/2412.00683)
 
 ## Abstract
 We propose a Dual-Stage Multi-Branch Fourier Low-Level Image Enhancement (DMFourLLIE) framework. In the first stage, DMFourLLIE integrates infrared image structure, spatial details, and complete Fourier information to enhance the overall image brightness, while avoiding potential issues introduced by independent component restoration. In the second stage, due to the limitations of mainly preserving spatial information in the phase component, we transform the inherent phase component stage into a pixel reconstruction stage. Specifically, it involves a dual-branch architecture with multi-scale spatial perception and Fast Fourier Convolution, enabling robust recovery of spatial structure and subtle texture variations in a single holistic optimization.
