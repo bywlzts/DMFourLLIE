@@ -140,6 +140,7 @@ class enhancement_model(BaseModel):
         if self.opt['train']['vgg_loss']:
             l_vgg = self.l_pix_w * self.cri_vgg(self.fake_H, self.real_H) * 0.3
             l_final = l_pix + l_vgg + l_ycrbr + l_pix_amp + l_ssim
+            self.log_dict['l_vgg'] = l_vgg.item()
         else:
             l_final = l_pix + l_ycrbr + l_pix_amp + l_ssim
         l_final.backward()
@@ -149,8 +150,6 @@ class enhancement_model(BaseModel):
         self.log_dict['l_pix_amp'] = l_pix_amp.item()
         self.log_dict['l_ssim'] = l_ssim.item()
         self.log_dict['l_ycrbr'] = l_ycrbr.item()
-        self.log_dict['l_vgg'] = l_vgg.item()
-
         #self.log_dict['l_ssim'] = l_ssim.item()
         #self.log_dict['l_style'] = l_style.item()
 
