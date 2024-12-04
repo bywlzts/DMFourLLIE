@@ -55,7 +55,7 @@ train:
   warmup_iter: -1  # -1: no warm up
   lr_gamma: 0.5
   eta_min: !!float 1e-7
-  pixel_criterion: l2
+  pixel_criterion: l1
   pixel_weight: 1.0
   val_freq: !!float 1e3
   manual.resize960x512_seed: 0
