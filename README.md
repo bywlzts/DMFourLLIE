@@ -8,7 +8,7 @@ We propose a Dual-Stage Multi-Branch Fourier Low-Level Image Enhancement (DMFour
 
 ## Installation
 ```
-conda create --name DMFourLLIE --file requirements.txt
+conda env create -f environment.yml
 conda activate DMFourLLIE
 ```
 
