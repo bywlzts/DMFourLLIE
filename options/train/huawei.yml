@@ -19,8 +19,8 @@ datasets:
 
     n_workers: 3  # per GPU
     batch_size: 8
-    GT_size: 128   # size you want to crop out as input sample.
-    LQ_size: 128
+    GT_size: 256   # size you want to crop out as input sample.
+    LQ_size: 256
     use_flip: true
     use_rot: true
     color: RGB
