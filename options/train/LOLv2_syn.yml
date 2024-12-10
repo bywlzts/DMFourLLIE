@@ -36,7 +36,7 @@ network_G:
   which_model_G: DMFourLLIE
   latt_nf: 16
   first_stage_nf: 16
-  second_stage_nf: 16
+  second_stage_nf: 32
 
 #### path
 path:
