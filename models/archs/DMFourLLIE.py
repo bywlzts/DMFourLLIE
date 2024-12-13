@@ -116,7 +116,7 @@ class FirstProcessModel(nn.Module):
 
         x5_input = torch.cat((x4, x0), dim=1)
         x5_input = self.concat_layers[1](x5_input)
-        x5, fr, y_map = self.fft_blocks[4](x5_input,fr,y_map)
+        x5, fr, y_map = self.fft_blocks[5](x5_input,fr,y_map)
 
         # Final output
         xout = self.output_conv(x5)
