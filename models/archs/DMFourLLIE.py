@@ -138,7 +138,7 @@ class SecondProcessModel(nn.Module):
         # Dual-branch blocks
         self.fft_blocks = nn.ModuleList([FFCResnetBlock(nf) for _ in range(num_blocks)])
         self.multi_blocks = nn.ModuleList([MultiConvBlock(nf) for _ in range(num_blocks)])
-        self.fusion_blocks = nn.ModuleList([arch_util.ChannelAttentionFusion(nf) for _ in range(num_blocks)])
+        self.fusion_block = arch_util.ChannelAttentionFusion(nf)
 
         # Reconstruction trunk
         ResidualBlock_noBN_f = functools.partial(arch_util.ResidualBlock_noBN, nf=nf)
@@ -161,11 +161,11 @@ class SecondProcessModel(nn.Module):
         fft_features = x3
         multi_features = x3
 
-        for fft_block, multi_block, fusion_block in zip(self.fft_blocks, self.multi_blocks, self.fusion_blocks):
+        for fft_block, multi_block in zip(self.fft_blocks, self.multi_blocks):
             fft_features = fft_block(fft_features)
             multi_features = multi_block(multi_features)
             # Fuse features using Channel Attention Fusion
-            fused_features = fusion_block(fft_features, multi_features)
+        fused_features = self.fusion_block(fft_features, multi_features)
         # Reconstruction and upsampling
         out_noise = self.recon_trunk(fused_features)
         out_noise = self._upsample(out_noise, x3, self.upconv1)
