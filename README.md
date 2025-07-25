@@ -18,6 +18,9 @@ conda activate DMFourLLIE
 ## Test
 ```python test.py -opt ./options/test/huawei.yml```
 
+## Pre-trained Models and Outputs
+[Google Drive](https://drive.google.com/drive/folders/1MOS1q6a8Tij7gDMED3cIJEyJO9038CGY?usp=sharing)
+
 ## Datasets
 - LOL-real and LOL-sys can be found in [here](https://github.com/flyywh/SGM-Low-Light).
 - LSRW-Huawei can be found in [here](https://github.com/JianghaiSCU/R2RNet).
