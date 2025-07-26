@@ -5,23 +5,23 @@ model: ll_dataset
 distortion: sr
 scale: 1
 crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
-gpu_ids: [0]
+gpu_ids: [1]
 
 datasets:
   test:  # the 1st test dataset
     name: test
-    dataroot_GT: 
-    dataroot_LQ: 
-    dataroot_FR: 
+    dataroot_GT: /home/zts/001_DataSets/Real_captured/Test/gt/
+    dataroot_LQ: /home/zts/001_DataSets/Real_captured/Test/input/
+    dataroot_FR: /home/zts/001_DataSets/Real_captured/fr_test/
 
 #### network structures
 network_G:
   which_model_G: DMFourLLIE
   latt_nf: 16
-  first_stage_nf: 16
-  second_stage_nf: 16
+  first_stage_nf: 8
+  second_stage_nf: 64
 
 #### path
 path:
   root: ./
-  pretrain_model_G: ./144000_G.pth
+  pretrain_model_G: /home/zts/MM_CR_Code/LOL-v2-Real/experiments/train/models/34000_G.pth
